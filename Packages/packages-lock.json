@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.spacecow.ecs.2d.anim": {
-      "version": "file:com.spacecow.ecs.2d.anim",
+    "com.spacecow.ecs.anim2d": {
+      "version": "file:com.spacecow.ecs.anim2d",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

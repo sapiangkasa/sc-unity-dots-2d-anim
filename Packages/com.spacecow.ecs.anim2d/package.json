@@ -1,8 +1,8 @@
 {
-  "name": "com.spacecow.ecs.2d.anim",
-  "version": "0.0.1",
+  "name": "com.spacecow.ecs.anim2d",
+  "version": "0.1.0",
   "displayName": "ECS 2D Animation",
-  "description": "This is an example package",
+  "description": "A simple 2D animation framework for Entities",
   "unity": "6000.0",
   "unityRelease": "62f1",
   "documentationUrl": "",
@@ -17,5 +17,12 @@
   "dependencies": {
     "com.unity.entities": "1.4.3",
     "com.unity.entities.graphics": "1.4.16"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Basic Sample",
+      "description": "Contains sample scene for the animation framework",
+      "path": "Samples~/SampleNormal"
+    }
+  ]
 }
