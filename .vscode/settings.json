@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "sc-dots-2d-anim-framework.sln"
+    "dotnet.defaultSolution": "sc-unity-dots-2d-anim-framework.sln"
 }
