@@ -1,5 +1,6 @@
 namespace SC.Ecs.Anim2d
 {
+    [System.Serializable]
     public struct AnimationData
     {
         public int AnimationIndex;
