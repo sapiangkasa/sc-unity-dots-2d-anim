@@ -37,9 +37,9 @@ Refer to the sample for an example on how the sprite sheet is setup
 
 ### Animator Authoring component
 
-The `AnimatorAuthoring` component is responsible for overrinding the shader's material properties to animate the sprite.
+The `AnimatorAuthoring` component is an abstract class responsible for overrinding the shader's material properties to animate the sprite.
 
-1. Add the `AnimatorAutoring` component to your entity that has the required shader.
+1. Create a concrete class that inherits from `AnimatorAutoring` and add it to your entity that has the required shader.
 2. Setup the `AnimationCount` and `MaxFrameCount` properties. These will initialize the relevant components when the entity is baked.
 3. In runtime your character controllers can set the `CurrentAnimationData` to set the current animation to be played. Note that the `FrameCount` property also needs to be set to the actual number of frame of the current animation (e.g. if your jump animation only uses 1 frame then set this property to 1). This is to make sure that the shader does not display empty frames.
 4. There is an `OnAnimationEndedEventFlag` enableable component that will be enabled when a non looping animation is completed. You can use this flag to handle animation ended events. An enableable component is used so that it does not introduce a structural change. You should disable this component once you have handled the event in your systems.
