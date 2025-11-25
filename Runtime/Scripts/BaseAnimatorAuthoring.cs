@@ -135,25 +135,25 @@ namespace SC.Ecs.Anim2d
     }
 
     /********** Authoring **********/
-    public class AnimatorAuthoring : MonoBehaviour
+    public abstract class BaseAnimatorAuthoring : MonoBehaviour
     {
         [Header("Animation Settings")]
         [SerializeField]
-        private int FacingDirection = 1;
+        protected int FacingDirection = 1;
         [SerializeField]
-        private int AnimationIndex;
+        protected int AnimationIndex;
         [SerializeField]
-        private int AnimationCount = 1;
+        protected int AnimationCount = 1;
         [SerializeField]
-        private int FrameIndex;
+        protected int FrameIndex;
         [SerializeField]
-        private int FrameCount = 1;
+        protected int FrameCount = 1;
         [SerializeField]
-        private int MaxFrameCount = 1;
+        protected int MaxFrameCount = 1;
 
-        public class Baker : Baker<AnimatorAuthoring>
+        public abstract class AnimatorBaker<T> : Baker<T>  where T : BaseAnimatorAuthoring
         {
-            public override void Bake(AnimatorAuthoring authoring)
+            public override void Bake(T authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
                 AddComponent(entity, new FacingDirection { Value = authoring.FacingDirection });
